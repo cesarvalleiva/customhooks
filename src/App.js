@@ -1,8 +1,9 @@
+import Characters from './Components/Characters'
 
 function App() {
   return (
     <>
-      
+      <Characters />
     </>
   );
 }

@@ -2,6 +2,7 @@
 import { useFetch } from '../../customHooks/useFetch'
 import { Row } from 'react-bootstrap'
 import Character from '../Character'
+import Loading from '../../Components/Loading'
 
 const Characters = () => {
     const [data, fetching, error] = useFetch('character');
@@ -9,7 +10,7 @@ const Characters = () => {
     return ( 
         <Row>
             {fetching ? (
-                <h2>Cargando</h2>
+                <Loading/>
             ) : (
                 characters.map((character) => (
                     <Character key={character.id} {...character} />

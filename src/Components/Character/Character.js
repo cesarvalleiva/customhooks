@@ -13,7 +13,7 @@ const Character = ({ image, name, gender, status, species, created }) => {
                         <p> {status} - {species} </p>
                         <small>{created}</small>
                     </Card.Text>
-                    <Button type="button" variant="primary" block="true">
+                    <Button variant="primary" size="sm" block>
                         Ver más
                     </Button>
                 </Card.Body>

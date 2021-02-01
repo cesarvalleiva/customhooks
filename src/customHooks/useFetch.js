@@ -21,7 +21,7 @@ export const useFetch = (endpoint, initialState = []) => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [endpoint]);
 
     return [data, fetching, error];
 }

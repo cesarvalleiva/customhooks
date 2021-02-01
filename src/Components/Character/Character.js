@@ -1,6 +1,24 @@
-const Character = () => {
+import { Col, Card, Button } from 'react-bootstrap'
+
+const Character = ({ image, name, gender, status, species, created }) => {
     return ( 
-        <h3>Character</h3>
+        <Col md={4}>
+            <Card className="mt-3 mb-3 text-center">
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>
+                        {name} - {gender}
+                    </Card.Title>
+                    <Card.Text>
+                        <p> {status} - {species} </p>
+                        <small>{created}</small>
+                    </Card.Text>
+                    <Button type="button" variant="primary" block="true">
+                        Ver más
+                    </Button>
+                </Card.Body>
+            </Card>
+        </Col>
      );
 }
  
